@@ -1,16 +1,18 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useReducer } from 'react';
 import { RecipeContext } from '../../Contexts/RecipeContext';
+
+const recipeTemplate = {
+    name: '',
+    description: '',
+    cookTime: '',
+    image: '',
+    ingredients: '',
+    instructions: ''
+};
 
 export default function CreateRecipeForm() {
     const { handleAddRecipe } = useContext(RecipeContext);
-    const [recipe, setRecipe] = useState({
-        name: '',
-        description: '',
-        cookTime: '',
-        image: '',
-        ingredients: '',
-        instructions: ''
-    });
+    const [recipe, setRecipe] = useState(recipeTemplate);
 
 
     const handleFormSubmit = (e) => {
@@ -26,14 +28,7 @@ export default function CreateRecipeForm() {
         e.target.reset();
         
         // Reset the 'recipe' object
-        setRecipe({
-              name: '',
-              description: '',
-              cookTime: '',
-              image: '',
-              ingredients: '',
-              instructions: ''
-        });
+        setRecipe(recipeTemplate);
     };
 
     const handleChange = (e) => {
