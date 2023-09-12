@@ -1,0 +1,112 @@
+// Main 
+
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+
+#Navyman {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-evenly;
+    background-color: #1c5f5f;
+    border-radius: 0px 0px 20px 20px;
+}
+
+
+    nav {
+        width: 400px;
+
+ul {
+    display: flex;
+    flex-direction: row;
+    column-gap: 25%;
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+}
+   
+}
+
+}
+
+
+div {
+    width: 100%;
+}
+
+// Main-end 
+
+
+
+// Home 
+
+
+
+#inticer {
+display: flex;
+justify-content: center;
+column-gap: 5%;
+margin-top: 2%;
+
+#invitationimg {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+
+}
+
+#cakeandinfo {
+width: 500px;
+}
+
+#randomquote {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+
+    p {
+width: 30%;
+    }
+}
+
+.cardsimgs {
+    width: 350px;
+    height: 200px;
+    overflow: hidden;
+}
+
+#recipelists {
+width: 100%;
+
+
+ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+   
+    align-items: center;
+    li {
+      display: flex;
+      column-gap: 10px;
+      border-color: black;
+border-width: 2px;
+border-style: solid;
+border-radius: 10px;
+width: 50%;
+    }
+
+
+
+}
+
+}
