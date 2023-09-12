@@ -2,17 +2,18 @@ import { useContext, useState, useReducer } from 'react';
 import { RecipeContext } from '../../Contexts/RecipeContext';
 
 const recipeTemplate = {
-    name: '',
-    description: '',
-    cookTime: '',
-    image: '',
-    ingredients: '',
-    instructions: ''
+    name: String,
+    description: String,
+    cookTime: String,
+    image: String,
+    ingredients: String,
+    instructions: String
 };
 
 export default function CreateRecipeForm() {
     const { handleAddRecipe } = useContext(RecipeContext);
     const [recipe, setRecipe] = useState(recipeTemplate);
+    console.log(recipe);
 
 
     const handleFormSubmit = (e) => {
