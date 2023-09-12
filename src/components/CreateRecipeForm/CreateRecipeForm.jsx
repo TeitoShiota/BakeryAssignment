@@ -2,7 +2,7 @@ import { useContext, useState } from 'react';
 import { RecipeContext } from '../../Contexts/RecipeContext';
 
 export default function CreateRecipeForm() {
-    const { handleRecipeAdded } = useContext(RecipeContext);
+    const { handleAddRecipe } = useContext(RecipeContext);
     const [recipe, setRecipe] = useState({
         name: '',
         description: '',
@@ -20,7 +20,7 @@ export default function CreateRecipeForm() {
         alert('Recipe submitted!')
         
         // Add the recipe to the list
-        handleRecipeAdded(recipe);
+        handleAddRecipe(recipe);
         
         // Clear the input fields
         e.target.reset();

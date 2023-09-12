@@ -4,14 +4,14 @@ export const RecipeContext = createContext();
 export const RecipeProvider = ({ children }) => {
   const [recipeList, setRecipeList] = useState([]);
 
-  const handleRecipeAdded = (newRecipe) => {
-    setRecipeList((prevValue) => [...prevValue, newRecipe]);
+  const handleAddRecipe = (newRecipe) => {
+    setRecipeList((prev) => [...prev, newRecipe]);
   };
 
   return (
     <RecipeContext.Provider value={{
       recipeList,
-      handleRecipeAdded,
+      handleAddRecipe,
     }}>
       {children}
     </RecipeContext.Provider>
