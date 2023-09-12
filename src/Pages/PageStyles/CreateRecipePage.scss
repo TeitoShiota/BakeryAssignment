@@ -1,0 +1,36 @@
+#Recipesubmit {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        row-gap: 10px;
+        input {
+            width: 100%;
+            margin: 1%;
+            border-radius: 20px;
+            padding: 3px;
+        }
+
+        textarea {
+            width: 100%;
+            margin: 1%;
+            border-radius: 20px;
+            padding: 3px;
+        }
+
+        button {
+            width: 10%;
+            margin: 1%;
+            border-radius: 20px;
+            background-color: aqua;
+        }
+    }
+
+}

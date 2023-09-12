@@ -1,28 +1,45 @@
+import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+
+// Contexts
+import { RecipeProvider } from "./Contexts/RecipeContext.jsx";
+
+
+// Base pages
 import Layout from "./Pages/Layout";
-import Home from "./Pages/Home";
-import Blogs from "./Pages/Blogs.jsx";
-import Contact from "./Pages/Contact";
-import NoPage from "./Pages/Nopage";
-import {RecipeProvider, RecipeContext} from "./components/RecipieCreation/TodoProvider.jsx";
+import ErrorPage from "./error-page";
 
-export default function App() {
-  return (
+
+// Pages
+import HomePage from "./Pages/HomePage.jsx";
+import CreateRecipePage from "./Pages/CreateRecipePage.jsx";
+import ContactPage from "./Pages/ContactPage.jsx";
+
+
+
+// Router
+const BrowserRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    errorElement: <ErrorPage />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "create-recipe", element: <CreateRecipePage /> },
+      { path: "contact", element: <ContactPage /> },
+    ],
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
     <RecipeProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="blogs" element={<Blogs />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="*" element={<NoPage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={BrowserRouter} />
     </RecipeProvider>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+  </React.StrictMode>
+);

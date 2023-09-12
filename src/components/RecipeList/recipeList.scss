@@ -1,0 +1,48 @@
+section {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: center;
+}
+
+#recipecontexttitle {
+    font-size: 50px;
+    
+}
+
+ol {
+   display: flex;
+    justify-content: center;
+   
+    padding: 0;
+    div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        h2 {
+            font-size: 30px;
+            margin: 0;
+        }
+
+        #disc {
+            font-size: 20px;
+            margin: 0;
+            color: grey;
+        }
+        
+        #time {
+            font-size: 12px;
+            margin: 0;
+            color: grey;
+        }
+
+        img {
+            width: 300px;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+    }
+}

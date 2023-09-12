@@ -1,7 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
 import "../Styles/Global.scss";
 
-const Layout = () => {
+export default function Layout() {
   return (
     <>
     <div id="Navyman">
@@ -12,7 +12,7 @@ const Layout = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/blogs">User-Recipies</Link>
+            <Link to="/create-recipe">Create Recipe</Link>
           </li>
           <li>
             <Link to="/contact">Contact</Link>
@@ -24,5 +24,3 @@ const Layout = () => {
     </>
   )
 };
-
-export default Layout;
